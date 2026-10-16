@@ -45,13 +45,12 @@ with right:
 st.subheader("📝 Study Records")
 st.dataframe(df, use_container_width=True, hide_index=True)
 
-# Footer
-st.success("🌟 Keep learning. Keep growing. Keep shining!")
+
 uploaded_file = st.file_uploader("Choose a file",type=["csv"])
 
 
 if uploaded_file is not None:
     data = pd.read_csv(uploaded_file)
     st.dataframe(data) 
-    
+
 st.success("🌟 Keep learning. Keep growing. Keep shining!")
